@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+<div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="mx-auto flex flex-col gap-2 justify-center items-center">
+      <h1 class="text-center text-2xl font-bold text-indigo-600 sm:text-3xl">Species: {{ species }}</h1>
+      <br>
+      <div class="flex gap-8">
+        <img height="300px" src="data:image/{{ ext }};base64,{{ image }}"/>
+        <p class="text-left text-md">{{ data }}</p>
+    </div>
+    </div>
+  </div>
+</body>
+</html>

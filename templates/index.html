@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+<div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-lg">
+      <h1 class="text-center text-2xl font-bold text-indigo-600 sm:text-3xl">Planter</h1>
+  
+  
+      <form action="/" method="post" class="mb-0 mt-6 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8">
+        <p class="text-center text-lg font-medium">Find Optimal Plants</p>
+  
+        <div>
+          <label for="city">City</label>
+  
+          <div class="relative">
+            <input
+              type="text"
+              name="city"
+              class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+              placeholder="Where do you live?"
+            />
+
+          </div>
+        </div>
+        <br>
+        <div>
+          <label for="edible">Do you want the plant to be edible?</label>
+
+            <select
+              name="edible"
+              id="edible"
+              class="mt-1.5 w-full rounded-lg border-gray-300 text-gray-700 sm:text-sm"
+            >
+              <option value="edible">Yes</option>
+              <option value="not edible">No</option>
+            </select>
+        </div>
+        <br>
+
+        <div>
+          <label for="water">How often do you want to water your plants (days)?</label>
+  
+          <div class="relative">
+            <input
+              type="number"
+              name="water"
+              class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+              placeholder="Plant watering frequency (days)"
+            />
+
+          </div>
+        </div>
+        <br>
+
+        <div>
+          <label for="appearance">How pretty do you want your plants to look?</label>
+
+            <select
+              name="appearance"
+              id="appearance"
+              class="mt-1.5 w-full rounded-lg border-gray-300 text-gray-700 sm:text-sm"
+            >
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+        </div>
+        <br>
+
+        <div>
+          <label for="usefulness">How useful do you want your plants to be?</label>
+
+            <select
+              name="usefulness"
+              id="usefulness"
+              class="mt-1.5 w-full rounded-lg border-gray-300 text-gray-700 sm:text-sm"
+            >
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+        </div>
+        <br>
+
+        <div>
+          <label for="inout">Inside or outside?</label>
+
+            <select
+              name="inout"
+              id="inout"
+              class="mt-1.5 w-full rounded-lg border-gray-300 text-gray-700 sm:text-sm"
+            >
+              <option value="inside">Inside</option>
+              <option value="outside">Outside</option>
+            </select>
+        </div>
+        <br>
+
+        <div>
+          <label for="size">How big?</label>
+
+            <select
+              name="size"
+              id="size"
+              class="mt-1.5 w-full rounded-lg border-gray-300 text-gray-700 sm:text-sm"
+            >
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="big">Big</option>
+            </select>
+        </div>
+        <br>
+        <div>
+          <label for="comments">Any other comments?</label>
+
+          <input
+          type="text"
+          name="comments"
+          class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+          placeholder="Type N/a for no comments"
+        />
+        </div>
+        
+
+  
+        <button
+          type="submit"
+          class="block w-full rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white"
+        >
+          Find
+        </button>
+  
+      </form>
+
+      <form action="/identify" enctype="multipart/form-data" method="post" class="mb-0 mt-6 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8">
+        <p class="text-center text-lg font-medium">Identify Invasive Plant Species</p>
+  
+        <div>
+          <label for="image" class="sr-only">Upload Image of Invasive Species</label>
+  
+          <div class="relative">
+            <input
+              type="file"
+              name="image"
+              class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+              placeholder="Uploaded Image"
+            />
+
+          </div>
+        </div>
+  
+        <button
+          type="submit"
+          class="block w-full rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white"
+        >
+          Upload
+        </button>
+  
+      </form>
+    </div>
+  </div>
+</body>
+</html>

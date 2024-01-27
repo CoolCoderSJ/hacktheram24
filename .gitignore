@@ -1,0 +1,9 @@
+ctf/
+nohup.out
+.env
+.profile
+.vscode-server/
+.cache/
+__pycache__/
+.python_history
+.bashrc

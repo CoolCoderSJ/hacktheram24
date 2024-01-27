@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+<div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="mx-auto flex flex-col gap-2 justify-center items-center">
+      <h1 class="text-center text-2xl font-bold text-indigo-600 sm:text-3xl">Planter</h1>
+      <br>
+      <p class="text-left text-md">Based on your weather data and sun coverage, here are the top 10 plants you should plant-</p>
+      <br>
+      <div class="grid grid-cols-2 max-w-2xl">
+      {% for i in plants %}
+      <a href="#" class="block rounded-lg p-4 shadow-sm shadow-indigo-100 w-full">
+        <div class="mt-2">
+          <dl>      
+            <div>
+              <dt class="sr-only">name</dt>
+              <dd class="font-medium">{{ (i.keys() | list)[0] }}</dd>
+            </div>
+          </dl>
+          <div>
+            <p class="text-left text-sm">{{ data[(i.keys() | list)[0]]['description'] }}</p>
+          </div>
+      
+          <div class="mt-6 flex items-center gap-8 text-xs">
+            <div class="sm:inline-flex sm:shrink-0 sm:items-center sm:gap-2">
+              
+      
+              <div class="mt-1.5 sm:mt-0">
+                <p class="text-gray-500">PPFD (amount of usable sunlight)</p>
+      
+                <p class="font-medium">{{ data[(i.keys() | list)[0]]['ppfd'] }}</p>
+              </div>
+            </div>
+      
+            <div class="sm:inline-flex sm:items-center sm:gap-2">
+              <div class="mt-1.5 sm:mt-0">
+                <p class="text-gray-500">Amount of Sunlight (hours)</p>
+      
+                <p class="font-medium">{{ data[(i.keys() | list)[0]]['photoperiod'] }}</p>
+              </div>
+            </div>
+    
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    </div>
+  </div>
+</body>
+</html>
